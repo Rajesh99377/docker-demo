@@ -26,5 +26,10 @@ pipeline {
                 sh 'docker run -d --name my-ci-cd-app -p 8083:80 my-ci-cd-app:latest'
             }
         }
+        stage('Smoke Test') {
+            steps {
+                sh 'curl -f http://localhost:8083/'
+            }
+        }
     }
 }
