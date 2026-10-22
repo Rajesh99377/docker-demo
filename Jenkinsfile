@@ -22,16 +22,17 @@ pipeline {
         }
 
         stage('Deploy Application') {
-            steps {
-                sh 'docker rm -f my-ci-cd-app-ci || true'
-                sh 'docker run -d --name my-ci-cd-app-ci -p 8083:80 my-ci-cd-app:latest'
-            }
-        }
+    steps {
+        sh 'docker rm -f my-ci-cd-app-ci || true'
+        sh 'docker run -d --name my-ci-cd-app-ci -p 8083:80 my-ci-cd-app:latest'
+        sh 'docker network connect devops-network my-ci-cd-app-ci'
+    }
+}
 
-        stage('Smoke Test') {
-            steps {
-                sh 'curl -f http://localhost:8083/'
-            }
-        }
+stage('Smoke Test') {
+    steps {
+        sh 'curl -f --max-time 10 http://my-ci-cd-app-ci/'
+    }
+}
     }
 }
