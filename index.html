@@ -473,6 +473,7 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
+                <a href="#troubleshooting">Troubleshooting</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -515,23 +516,34 @@
             </div>
         </section>
 
-        <section id="about">
-            <div class="container">
-                <div class="section-heading">
-                    <h2>About Me</h2>
-                    <p>Learning by building real projects</p>
-                </div>
-                <div class="about-box">
-                    <p>
-                        I am developing hands-on DevOps skills through practical
-                        projects. My current lab demonstrates how to package a
-                        website into a Docker image, deploy it using Nginx,
-                        track changes with Git, and automate build and deployment
-                        tasks with a Jenkins pipeline.
-                    </p>
-                </div>
-            </div>
-        </section>
+        
+<section id="about">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Professional About Me</h2>
+            <p>Building practical skills in DevOps and automation</p>
+        </div>
+        <div class="about-box">
+            <p>
+                I am a Computer Science graduate focused on developing
+                practical DevOps skills through hands-on projects. I have
+                built a containerized website using Docker and Nginx and
+                configured a Jenkins CI/CD pipeline integrated with GitHub.
+            </p>
+            <p>
+                My project includes Docker image builds, container deployment,
+                pipeline stages, and smoke testing. I also troubleshot a
+                container networking issue by connecting Jenkins and the
+                application to a shared Docker network.
+            </p>
+            <p>
+                I am continuing to strengthen my skills in Linux, Git,
+                Docker, Jenkins, and CI/CD automation through practical
+                learning and troubleshooting.
+            </p>
+        </div>
+    </div>
+</section>
 
         <section id="skills">
             <div class="container">
@@ -597,21 +609,31 @@
                             <span>HTML/CSS</span>
                         </div>
                     </article>
+                     
+
 
                     <article class="project-card">
-                        <div class="project-number">PROJECT 02</div>
-                        <h3>Jenkins CI/CD Pipeline</h3>
-                        <p>
-                            Practiced a Jenkins pipeline to build an image,
-                            inspect it, deploy a container and perform
-                            a website smoke test.
-                        </p>
-                        <div class="project-tags">
-                            <span>Jenkins</span>
-                            <span>Docker</span>
-                            <span>CI/CD</span>
-                        </div>
-                    </article>
+    <div class="project-number">PROJECT 02</div>
+    <h3>GitHub–Jenkins CI/CD Pipeline</h3>
+    <p>
+        Integrated a GitHub repository with a Jenkins pipeline
+        to build and inspect a Docker image, deploy an Nginx
+        website container, and run a smoke test.
+    </p>
+    <p>
+        Troubleshot a failed smoke test caused by container
+        networking. Connected Jenkins and the application to
+        a shared Docker network and verified successful deployment.
+    </p>
+    <div class="project-tags">
+        <span>GitHub</span>
+        <span>Jenkins</span>
+        <span>Docker</span>
+        <span>Nginx</span>
+        <span>CI/CD</span>
+    </div>
+</article>
+
 
                     <article class="project-card">
                         <div class="project-number">PROJECT 03</div>
@@ -624,6 +646,51 @@
                             <span>Git</span>
                             <span>Linux</span>
                             <span>Workflow</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="troubleshooting">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Troubleshooting &amp; Problems Solved</h2>
+                    <p>Practical lessons from my DevOps lab</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-number">CHALLENGE 01</div>
+                        <h3>Docker Container Networking</h3>
+                        <p>
+                            <strong>Problem:</strong> The Jenkins smoke test
+                            could not reach the website through localhost:8083
+                            because localhost referred to the Jenkins container.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Connected Jenkins and the
+                            application container to a shared Docker network and
+                            used the application container name for the smoke test.
+                        </p>
+                        <div class="project-tags">
+                            <span>Docker Network</span>
+                            <span>Jenkins</span>
+                            <span>curl</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-number">CHALLENGE 02</div>
+                        <h3>Pipeline Verification</h3>
+                        <p>
+                            Verified Docker image creation, container deployment,
+                            and website availability. After correcting the
+                            networking configuration, the Jenkins pipeline
+                            completed successfully.
+                        </p>
+                        <div class="project-tags">
+                            <span>CI/CD</span>
+                            <span>Smoke Testing</span>
+                            <span>Nginx</span>
                         </div>
                     </article>
                 </div>
@@ -667,6 +734,10 @@
                         <a class="button" href="https://github.com/Rajesh99377"
                            target="_blank" rel="noopener noreferrer">
                             Visit My GitHub
+                        </a>
+                        <a class="button button-outline"
+                           href="resume.pdf" download>
+                            Download Resume (PDF)
                         </a>
                         <a class="button button-outline" href="#home">
                             Back to Top
