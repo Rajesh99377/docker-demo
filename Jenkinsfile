@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -22,10 +23,11 @@ pipeline {
 
         stage('Deploy Application') {
             steps {
-                sh 'docker rm -f my-ci-cd-app || true'
-                sh 'docker run -d --name my-ci-cd-app -p 8083:80 my-ci-cd-app:latest'
+                sh 'docker rm -f my-ci-cd-app-ci || true'
+                sh 'docker run -d --name my-ci-cd-app-ci -p 8083:80 my-ci-cd-app:latest'
             }
         }
+
         stage('Smoke Test') {
             steps {
                 sh 'curl -f http://localhost:8083/'
